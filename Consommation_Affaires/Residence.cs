@@ -49,9 +49,11 @@ namespace Consommation_Affaires
             foreach(Utilisation uneUtilisation in _utilisations)
             {
                 if (uneUtilisation.NbHeures >= nbHeuresMin)
-                    if (liste.Contains(uneUtilisation.Appareil))
+                    if (! liste.Contains(uneUtilisation.Appareil))
                         liste.Add(uneUtilisation.Appareil);
+
             }
+            return liste;
         }
 
 
